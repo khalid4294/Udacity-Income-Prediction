@@ -1,4 +1,2 @@
-['remote "aws_s3"']
-    url = s3://udacity-income-prediction
 ['remote "remote_aws"']
     url = s3://udacity-income-prediction-1
