@@ -1,1 +1,1 @@
-web: gunicorn main:app -k uvicorn.workers.UvicornWorker
+web: dvc pull && gunicorn main:app -k uvicorn.workers.UvicornWorker
