@@ -1,5 +1,8 @@
 # Script to train machine learning model.
 # Add the necessary imports for the starter code.
+import sys
+
+sys.path.append("/Users/khalid/Desktop/Udacity-Income-Prediction")
 
 import joblib
 import pandas as pd
