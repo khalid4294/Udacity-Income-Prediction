@@ -107,3 +107,4 @@ def test_cloud_api_post():
     }
     r = requests.post(end_point, json=data)
     assert r.status_code == 200
+    assert r.json() == "Predicted salary is > 50K"
