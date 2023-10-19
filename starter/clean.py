@@ -2,7 +2,7 @@ import pandas as pd
 
 df = pd.read_csv("data/census.csv")
 
-# remove the prefixed spacing
+# remove the prefixed spacing for columns
 df.columns = [x.split()[0] for x in df.columns]
 
 # create label column
