@@ -26,10 +26,7 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: ${{ matrix.python-version }}
-    
-    - name: Test Secret Printing
-      run: echo ${{ secrets.AWS_ACCESS_KEY_ID }}        
-
+       
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
@@ -41,6 +38,7 @@ jobs:
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
         aws-region: us-east-2
         role-duration-seconds: 1200
 
