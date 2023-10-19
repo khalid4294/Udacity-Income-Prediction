@@ -26,6 +26,9 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: ${{ matrix.python-version }}
+    
+    - name: Test Secret Printing
+      run: echo ${{ secrets.AWS_ACCESS_KEY_ID }}        
 
     - name: Install dependencies
       run: |
