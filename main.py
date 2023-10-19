@@ -9,7 +9,7 @@ from starter.ml.data import process_data
 
 # setting up dvc
 if "DYNO" in os.environ and os.path.isdir(".dvc"):
-    os.system("chmod +x path_to_dvc_binary/dvc")
+    os.system("chmod +x dvc")
     os.system("dvc config core.no_scm true")
     if os.system("dvc pull") != 0:
         exit("dvc pull failed")
