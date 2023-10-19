@@ -13,7 +13,7 @@ for idx, col in df.iterrows():
     else:
         df.loc[idx, "labels"] = 0
 
-df.drop(columns=["salary"])
+df.drop(columns=["salary"], inplace=True)
 
 # change from float to int
 df["labels"] = df["labels"].astype(int)
