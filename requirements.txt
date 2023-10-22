@@ -8,3 +8,4 @@ gunicorn==20.1.0
 uvicorn
 dvc==3.27.0
 dvc-s3==2.23.0
+httpx
