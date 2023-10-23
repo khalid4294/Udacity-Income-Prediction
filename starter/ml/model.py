@@ -72,8 +72,11 @@ def compute_model_slice_metrics(test, cat_features, model, encoder, lb):
     """
     Validates slices of the trained machine learning model using precision, recall, and F1.
     """
+    string = ""
+
     for i in cat_features:
         unique_vals = test[i].unique()
+
         for j in unique_vals:
             test_slice = test[test[i] == j]
             X_test, y_test, encoder, lb = process_data(
@@ -86,19 +89,15 @@ def compute_model_slice_metrics(test, cat_features, model, encoder, lb):
             )
             preds = model.predict(X_test)
 
-            print(
-                f"accuracy for feature {i} with value {j}: {accuracy_score(y_test, preds)}"
+            string += f"accuracy for feature {i} with value {j}: {accuracy_score(y_test, preds)}\n"
+            string += f"Test shape: {test_slice.shape}\n"
+            string += (
+                f"Test labels (0): {test_slice['labels'].value_counts().values[0]}\n"
             )
-
-            print(f"Test shape: {test_slice.shape}")
-            print(f"Test labels (0): {test_slice['labels'].value_counts().values[0]}")
-
             try:
-                print(
-                    f"Test labels (1): {test_slice['labels'].value_counts().values[1]}"
-                )
+                string += f"Test labels (1): {test_slice['labels'].value_counts().values[1]}\n"
             except:
-                print("Test labels (1): 0")
+                string += "Test labels (1): 0\n"
 
-            print("")
-            print("")
+    with open("screenshots/slice_output.txt", "w") as f:
+        f.write(string)

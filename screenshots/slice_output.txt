@@ -1,0 +1,404 @@
+accuracy for feature workclass with value Federal-gov: 0.65
+Test shape: (180, 15)
+Test labels (0): 109
+Test labels (1): 71
+accuracy for feature workclass with value Private: 0.816688567674113
+Test shape: (4566, 15)
+Test labels (0): 3586
+Test labels (1): 980
+accuracy for feature workclass with value ?: 0.9127906976744186
+Test shape: (344, 15)
+Test labels (0): 314
+Test labels (1): 30
+accuracy for feature workclass with value Local-gov: 0.7368421052631579
+Test shape: (418, 15)
+Test labels (0): 293
+Test labels (1): 125
+accuracy for feature workclass with value Self-emp-inc: 0.6120689655172413
+Test shape: (232, 15)
+Test labels (0): 132
+Test labels (1): 100
+accuracy for feature workclass with value State-gov: 0.7985865724381626
+Test shape: (283, 15)
+Test labels (0): 210
+Test labels (1): 73
+accuracy for feature workclass with value Self-emp-not-inc: 0.7628865979381443
+Test shape: (485, 15)
+Test labels (0): 332
+Test labels (1): 153
+accuracy for feature workclass with value Without-pay: 1.0
+Test shape: (3, 15)
+Test labels (0): 3
+Test labels (1): 0
+accuracy for feature workclass with value Never-worked: 1.0
+Test shape: (2, 15)
+Test labels (0): 2
+Test labels (1): 0
+accuracy for feature education with value Some-college: 0.8104619565217391
+Test shape: (1472, 15)
+Test labels (0): 1180
+Test labels (1): 292
+accuracy for feature education with value Bachelors: 0.6798866855524079
+Test shape: (1059, 15)
+Test labels (0): 609
+Test labels (1): 450
+accuracy for feature education with value HS-grad: 0.8583690987124464
+Test shape: (2097, 15)
+Test labels (0): 1788
+Test labels (1): 309
+accuracy for feature education with value Masters: 0.6246418338108882
+Test shape: (349, 15)
+Test labels (0): 194
+Test labels (1): 155
+accuracy for feature education with value Assoc-voc: 0.7347670250896058
+Test shape: (279, 15)
+Test labels (0): 205
+Test labels (1): 74
+accuracy for feature education with value Assoc-acdm: 0.8110599078341014
+Test shape: (217, 15)
+Test labels (0): 169
+Test labels (1): 48
+accuracy for feature education with value Prof-school: 0.6016949152542372
+Test shape: (118, 15)
+Test labels (0): 81
+Test labels (1): 37
+accuracy for feature education with value 5th-6th: 0.953125
+Test shape: (64, 15)
+Test labels (0): 61
+Test labels (1): 3
+accuracy for feature education with value Doctorate: 0.4606741573033708
+Test shape: (89, 15)
+Test labels (0): 67
+Test labels (1): 22
+accuracy for feature education with value 11th: 0.9717741935483871
+Test shape: (248, 15)
+Test labels (0): 237
+Test labels (1): 11
+accuracy for feature education with value 7th-8th: 0.888
+Test shape: (125, 15)
+Test labels (0): 112
+Test labels (1): 13
+accuracy for feature education with value 10th: 0.9411764705882353
+Test shape: (170, 15)
+Test labels (0): 160
+Test labels (1): 10
+accuracy for feature education with value 9th: 0.9428571428571428
+Test shape: (105, 15)
+Test labels (0): 100
+Test labels (1): 5
+accuracy for feature education with value 12th: 0.9493670886075949
+Test shape: (79, 15)
+Test labels (0): 73
+Test labels (1): 6
+accuracy for feature education with value Preschool: 0.9090909090909091
+Test shape: (11, 15)
+Test labels (0): 11
+Test labels (1): 0
+accuracy for feature education with value 1st-4th: 0.967741935483871
+Test shape: (31, 15)
+Test labels (0): 30
+Test labels (1): 1
+accuracy for feature marital-status with value Married-civ-spouse: 0.6390850992263707
+Test shape: (2973, 15)
+Test labels (0): 1631
+Test labels (1): 1342
+accuracy for feature marital-status with value Divorced: 0.9087759815242494
+Test shape: (866, 15)
+Test labels (0): 785
+Test labels (1): 81
+accuracy for feature marital-status with value Never-married: 0.9429744525547445
+Test shape: (2192, 15)
+Test labels (0): 2087
+Test labels (1): 105
+accuracy for feature marital-status with value Married-spouse-absent: 0.963855421686747
+Test shape: (83, 15)
+Test labels (0): 76
+Test labels (1): 7
+accuracy for feature marital-status with value Separated: 0.9425837320574163
+Test shape: (209, 15)
+Test labels (0): 197
+Test labels (1): 12
+accuracy for feature marital-status with value Widowed: 0.9513513513513514
+Test shape: (185, 15)
+Test labels (0): 169
+Test labels (1): 16
+accuracy for feature marital-status with value Married-AF-spouse: 0.8
+Test shape: (5, 15)
+Test labels (0): 4
+Test labels (1): 1
+accuracy for feature occupation with value Exec-managerial: 0.633495145631068
+Test shape: (824, 15)
+Test labels (0): 423
+Test labels (1): 401
+accuracy for feature occupation with value Prof-specialty: 0.6716077537058153
+Test shape: (877, 15)
+Test labels (0): 485
+Test labels (1): 392
+accuracy for feature occupation with value Other-service: 0.9442815249266863
+Test shape: (682, 15)
+Test labels (0): 651
+Test labels (1): 31
+accuracy for feature occupation with value Adm-clerical: 0.8718274111675127
+Test shape: (788, 15)
+Test labels (0): 683
+Test labels (1): 105
+accuracy for feature occupation with value Tech-support: 0.7151515151515152
+Test shape: (165, 15)
+Test labels (0): 116
+Test labels (1): 49
+accuracy for feature occupation with value ?: 0.9132947976878613
+Test shape: (346, 15)
+Test labels (0): 316
+Test labels (1): 30
+accuracy for feature occupation with value Sales: 0.7755102040816326
+Test shape: (686, 15)
+Test labels (0): 498
+Test labels (1): 188
+accuracy for feature occupation with value Craft-repair: 0.7890137328339576
+Test shape: (801, 15)
+Test labels (0): 615
+Test labels (1): 186
+accuracy for feature occupation with value Farming-fishing: 0.85
+Test shape: (200, 15)
+Test labels (0): 170
+Test labels (1): 30
+accuracy for feature occupation with value Machine-op-inspct: 0.8921568627450981
+Test shape: (408, 15)
+Test labels (0): 368
+Test labels (1): 40
+accuracy for feature occupation with value Transport-moving: 0.8386075949367089
+Test shape: (316, 15)
+Test labels (0): 256
+Test labels (1): 60
+accuracy for feature occupation with value Protective-serv: 0.7317073170731707
+Test shape: (123, 15)
+Test labels (0): 84
+Test labels (1): 39
+accuracy for feature occupation with value Handlers-cleaners: 0.9479553903345725
+Test shape: (269, 15)
+Test labels (0): 257
+Test labels (1): 12
+accuracy for feature occupation with value Priv-house-serv: 1.0
+Test shape: (26, 15)
+Test labels (0): 26
+Test labels (1): 0
+accuracy for feature occupation with value Armed-Forces: 0.5
+Test shape: (2, 15)
+Test labels (0): 1
+Test labels (1): 1
+accuracy for feature relationship with value Husband: 0.6422018348623854
+Test shape: (2616, 15)
+Test labels (0): 1437
+Test labels (1): 1179
+accuracy for feature relationship with value Wife: 0.6074766355140186
+Test shape: (321, 15)
+Test labels (0): 167
+Test labels (1): 154
+accuracy for feature relationship with value Not-in-family: 0.8987878787878788
+Test shape: (1650, 15)
+Test labels (0): 1479
+Test labels (1): 171
+accuracy for feature relationship with value Own-child: 0.9701636188642926
+Test shape: (1039, 15)
+Test labels (0): 1024
+Test labels (1): 15
+accuracy for feature relationship with value Unmarried: 0.9529914529914529
+Test shape: (702, 15)
+Test labels (0): 665
+Test labels (1): 37
+accuracy for feature relationship with value Other-relative: 0.9513513513513514
+Test shape: (185, 15)
+Test labels (0): 177
+Test labels (1): 8
+accuracy for feature race with value White: 0.7858304717151635
+Test shape: (5533, 15)
+Test labels (0): 4103
+Test labels (1): 1430
+accuracy for feature race with value Black: 0.903125
+Test shape: (640, 15)
+Test labels (0): 574
+Test labels (1): 66
+accuracy for feature race with value Asian-Pac-Islander: 0.8211009174311926
+Test shape: (218, 15)
+Test labels (0): 167
+Test labels (1): 51
+accuracy for feature race with value Amer-Indian-Eskimo: 0.864406779661017
+Test shape: (59, 15)
+Test labels (0): 50
+Test labels (1): 9
+accuracy for feature race with value Other: 0.873015873015873
+Test shape: (63, 15)
+Test labels (0): 55
+Test labels (1): 8
+accuracy for feature sex with value Male: 0.7486705202312138
+Test shape: (4325, 15)
+Test labels (0): 2988
+Test labels (1): 1337
+accuracy for feature sex with value Female: 0.9017367458866545
+Test shape: (2188, 15)
+Test labels (0): 1961
+Test labels (1): 227
+accuracy for feature native-country with value United-States: 0.7975355125791546
+Test shape: (5843, 15)
+Test labels (0): 4428
+Test labels (1): 1415
+accuracy for feature native-country with value Vietnam: 0.9375
+Test shape: (16, 15)
+Test labels (0): 15
+Test labels (1): 1
+accuracy for feature native-country with value Taiwan: 0.6666666666666666
+Test shape: (9, 15)
+Test labels (0): 6
+Test labels (1): 3
+accuracy for feature native-country with value Philippines: 0.8
+Test shape: (45, 15)
+Test labels (0): 31
+Test labels (1): 14
+accuracy for feature native-country with value Poland: 0.8
+Test shape: (10, 15)
+Test labels (0): 8
+Test labels (1): 2
+accuracy for feature native-country with value China: 0.7333333333333333
+Test shape: (15, 15)
+Test labels (0): 12
+Test labels (1): 3
+accuracy for feature native-country with value Canada: 0.6666666666666666
+Test shape: (27, 15)
+Test labels (0): 15
+Test labels (1): 12
+accuracy for feature native-country with value ?: 0.7454545454545455
+Test shape: (110, 15)
+Test labels (0): 72
+Test labels (1): 38
+accuracy for feature native-country with value El-Salvador: 1.0
+Test shape: (21, 15)
+Test labels (0): 20
+Test labels (1): 1
+accuracy for feature native-country with value South: 0.8947368421052632
+Test shape: (19, 15)
+Test labels (0): 16
+Test labels (1): 3
+accuracy for feature native-country with value Mexico: 0.9304347826086956
+Test shape: (115, 15)
+Test labels (0): 107
+Test labels (1): 8
+accuracy for feature native-country with value Ireland: 1.0
+Test shape: (3, 15)
+Test labels (0): 3
+Test labels (1): 0
+accuracy for feature native-country with value Italy: 0.6923076923076923
+Test shape: (13, 15)
+Test labels (0): 8
+Test labels (1): 5
+accuracy for feature native-country with value Peru: 0.8333333333333334
+Test shape: (6, 15)
+Test labels (0): 5
+Test labels (1): 1
+accuracy for feature native-country with value Dominican-Republic: 1.0
+Test shape: (13, 15)
+Test labels (0): 13
+Test labels (1): 0
+accuracy for feature native-country with value Nicaragua: 1.0
+Test shape: (7, 15)
+Test labels (0): 7
+Test labels (1): 0
+accuracy for feature native-country with value Cuba: 0.8
+Test shape: (20, 15)
+Test labels (0): 16
+Test labels (1): 4
+accuracy for feature native-country with value Jamaica: 0.8823529411764706
+Test shape: (17, 15)
+Test labels (0): 15
+Test labels (1): 2
+accuracy for feature native-country with value Columbia: 1.0
+Test shape: (17, 15)
+Test labels (0): 17
+Test labels (1): 0
+accuracy for feature native-country with value France: 0.5714285714285714
+Test shape: (7, 15)
+Test labels (0): 4
+Test labels (1): 3
+accuracy for feature native-country with value Hong: 1.0
+Test shape: (5, 15)
+Test labels (0): 5
+Test labels (1): 0
+accuracy for feature native-country with value Germany: 0.8
+Test shape: (30, 15)
+Test labels (0): 21
+Test labels (1): 9
+accuracy for feature native-country with value Thailand: 1.0
+Test shape: (2, 15)
+Test labels (0): 2
+Test labels (1): 0
+accuracy for feature native-country with value Haiti: 0.8461538461538461
+Test shape: (13, 15)
+Test labels (0): 11
+Test labels (1): 2
+accuracy for feature native-country with value India: 0.7368421052631579
+Test shape: (19, 15)
+Test labels (0): 11
+Test labels (1): 8
+accuracy for feature native-country with value England: 0.5
+Test shape: (14, 15)
+Test labels (0): 8
+Test labels (1): 6
+accuracy for feature native-country with value Iran: 0.6363636363636364
+Test shape: (11, 15)
+Test labels (0): 7
+Test labels (1): 4
+accuracy for feature native-country with value Greece: 1.0
+Test shape: (3, 15)
+Test labels (0): 2
+Test labels (1): 1
+accuracy for feature native-country with value Ecuador: 0.8
+Test shape: (10, 15)
+Test labels (0): 8
+Test labels (1): 2
+accuracy for feature native-country with value Cambodia: 0.5
+Test shape: (4, 15)
+Test labels (0): 3
+Test labels (1): 1
+accuracy for feature native-country with value Portugal: 0.8333333333333334
+Test shape: (6, 15)
+Test labels (0): 5
+Test labels (1): 1
+accuracy for feature native-country with value Japan: 0.7647058823529411
+Test shape: (17, 15)
+Test labels (0): 11
+Test labels (1): 6
+accuracy for feature native-country with value Puerto-Rico: 0.8571428571428571
+Test shape: (21, 15)
+Test labels (0): 17
+Test labels (1): 4
+accuracy for feature native-country with value Laos: 0.8
+Test shape: (5, 15)
+Test labels (0): 4
+Test labels (1): 1
+accuracy for feature native-country with value Scotland: 0.5
+Test shape: (2, 15)
+Test labels (0): 1
+Test labels (1): 1
+accuracy for feature native-country with value Yugoslavia: 0.6666666666666666
+Test shape: (3, 15)
+Test labels (0): 2
+Test labels (1): 1
+accuracy for feature native-country with value Guatemala: 1.0
+Test shape: (9, 15)
+Test labels (0): 9
+Test labels (1): 0
+accuracy for feature native-country with value Trinadad&Tobago: 1.0
+Test shape: (1, 15)
+Test labels (0): 1
+Test labels (1): 0
+accuracy for feature native-country with value Outlying-US(Guam-USVI-etc): 1.0
+Test shape: (1, 15)
+Test labels (0): 1
+Test labels (1): 0
+accuracy for feature native-country with value Honduras: 1.0
+Test shape: (1, 15)
+Test labels (0): 1
+Test labels (1): 0
+accuracy for feature native-country with value Hungary: 1.0
+Test shape: (3, 15)
+Test labels (0): 3
+Test labels (1): 0
