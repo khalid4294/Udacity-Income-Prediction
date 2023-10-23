@@ -3,3 +3,5 @@ README.md
 sandbox.ipynb
 __pycache__
 .pytest_cache
+dvc_on_heroku_instructions.md
+
