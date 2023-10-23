@@ -79,14 +79,13 @@ def test_cloud_api_get():
 
 def test_cloud_api_post_negative(test_data_negative):
     end_point = "https://udacity-income-prediction-6a6fa37bfd96.herokuapp.com/predict"
-    r = requests.post(end_point, json={"dict_features": [test_data_negative]})
-    print(r.json())
+    r = requests.post(end_point, json=test_data_negative)
     assert r.status_code == 200
     assert r.json() == "Predicted salary is <= 50K"
 
 
 def test_cloud_api_post_positive(test_data_positive):
     end_point = "https://udacity-income-prediction-6a6fa37bfd96.herokuapp.com/predict"
-    r = requests.post(end_point, json={"dict_features": [test_data_positive]})
+    r = requests.post(end_point, json=test_data_positive)
     assert r.status_code == 200
     assert r.json() == "Predicted salary is > 50K"

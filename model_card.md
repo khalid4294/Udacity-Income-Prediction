@@ -37,6 +37,8 @@ fbeta
 
 ## Ethical Considerations
 
+From the accuracy metrics provided for different features, it's evident that the model performance varies across different categories. For example, there's a wide range of accuracy values within 'workclass', 'education', and 'occupation'. This variation indicates potential biases in the model. If decisions are made based on this model, it might treat some groups unfairly
+
 ## Caveats and Recommendations
 
 Some recommendations:
