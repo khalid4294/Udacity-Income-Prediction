@@ -82,29 +82,15 @@ def test_cloud_api_get():
     assert r.status_code == 200
 
 
-def test_cloud_api_post():
+def test_cloud_api_post_positive(test_data_positive):
     end_point = "https://udacity-income-prediction-6a6fa37bfd96.herokuapp.com/predict"
-    data = {
-        "dict_features": [
-            {
-                "age": "46",
-                "workclass": "Self-emp-not-inc",
-                "fnlgt": "198759",
-                "education": "Prof-school",
-                "education-num": "15",
-                "marital-status": "Married-civ-spouse",
-                "occupation": "Prof-specialty",
-                "relationship": "Husband",
-                "race": "White",
-                "sex": "Male",
-                "capital-gain": "0",
-                "capital-loss": "2415",
-                "hours-per-week": "80",
-                "native-country": "United-States",
-                "labels": "1",
-            }
-        ]
-    }
-    r = requests.post(end_point, json=data)
+    r = requests.post(end_point, json=test_data_positive)
     assert r.status_code == 200
     assert r.json() == "Predicted salary is > 50K"
+
+
+def test_cloud_api_post_negative(test_data_negative):
+    end_point = "https://udacity-income-prediction-6a6fa37bfd96.herokuapp.com/predict"
+    r = requests.post(end_point, json=test_data_negative)
+    assert r.status_code == 200
+    assert r.json() == "Predicted salary is <= 50K"
