@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 import joblib
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from typing import Optional, List, Dict, Any
 from fastapi import FastAPI, HTTPException
 from starter.ml.data import process_data
@@ -14,20 +14,42 @@ if "DYNO" in os.environ and os.path.isdir(".dvc"):
         exit("dvc pull failed")
     os.system("rm -r .dvc .apt/usr/lib/dvc")
 
+cat_features = [
+    "workclass",
+    "education",
+    "marital_status",
+    "occupation",
+    "relationship",
+    "race",
+    "sex",
+    "native_country",
+]
+
+
+def to_snake_case(string: str) -> str:
+    return string.replace("-", "_")
+
 
 class Features(BaseModel):
-    # df must contain 15 features.
-    dict_features: List[Dict[str, Any]]
-    cat_features: Optional[List[str]] = [
-        "workclass",
-        "education",
-        "marital-status",
-        "occupation",
-        "relationship",
-        "race",
-        "sex",
-        "native-country",
-    ]
+    age: int = Field(example=32)
+    workclass: str = Field(example="Private")
+    fnlgt: int = Field(example=205019)
+    education: str = Field(example="Assoc-acdm")
+    education_num: int = Field(example=12)
+    marital_status: str = Field(example="Never-married")
+    occupation: str = Field(example="Sales")
+    relationship: str = Field(example="Not-in-family")
+    race: str = Field(example="Black")
+    sex: str = Field(example="Male")
+    capital_gain: int = Field(example=0)
+    capital_loss: int = Field(example=0)
+    hours_per_week: int = Field(example=50)
+    native_country: str = Field(example="United-States")
+    labels: int = Field(example=0)
+
+    class Config:
+        alias_generator = to_snake_case
+        allow_population_by_field_name = True
 
 
 app = FastAPI(
@@ -53,23 +75,18 @@ def home():
 async def predict(features: Features):
     # adding HTTPException for invalid input
 
-    if len(features.dict_features) != 1:
-        raise HTTPException(
-            status_code=400,
-            detail="Invalid input. Please provide only 1 user.",
-        )
-
-    elif len(features.dict_features[0]) != 15:
+    dict_features = features.dict()
+    if len(dict_features) != 15:
         raise HTTPException(
             status_code=400,
             detail="Invalid input. Please provide 15 features for each user.",
         )
 
     model, lb, encoder = await load_model()
-    df = pd.DataFrame(features.dict_features)
+    df = pd.DataFrame(dict_features, index=[0])
     X, Y, encoder, lb = process_data(
         df,
-        categorical_features=features.cat_features,
+        categorical_features=cat_features,
         label="labels",
         training=False,
         encoder=encoder,

@@ -10,25 +10,21 @@ client = TestClient(app)
 @pytest.fixture
 def test_data_negative():
     data = {
-        "dict_features": [
-            {
-                "age": "32",
-                "workclass": "Private",
-                "fnlgt": "205019",
-                "education": "Assoc-acdm",
-                "education-num": "12",
-                "marital-status": "Never-married",
-                "occupation": "Sales",
-                "relationship": "Not-in-family",
-                "race": "Black",
-                "sex": "Male",
-                "capital-gain": "0",
-                "capital-loss": "0",
-                "hours-per-week": "50",
-                "native-country": "United-States",
-                "labels": "0",
-            }
-        ]
+        "age": 32,
+        "workclass": "Private",
+        "fnlgt": 205019,
+        "education": "Assoc-acdm",
+        "education_num": 12,
+        "marital_status": "Never-married",
+        "occupation": "Sales",
+        "relationship": "Not-in-family",
+        "race": "Black",
+        "sex": "Male",
+        "capital_gain": 0,
+        "capital_loss": 0,
+        "hours_per_week": 50,
+        "native_country": "United-States",
+        "labels": 0,
     }
     return data
 
@@ -36,26 +32,23 @@ def test_data_negative():
 @pytest.fixture
 def test_data_positive():
     data = {
-        "dict_features": [
-            {
-                "age": "46",
-                "workclass": "Self-emp-not-inc",
-                "fnlgt": "198759",
-                "education": "Prof-school",
-                "education-num": "15",
-                "marital-status": "Married-civ-spouse",
-                "occupation": "Prof-specialty",
-                "relationship": "Husband",
-                "race": "White",
-                "sex": "Male",
-                "capital-gain": "0",
-                "capital-loss": "2415",
-                "hours-per-week": "80",
-                "native-country": "United-States",
-                "labels": "1",
-            }
-        ]
+        "age": 46,
+        "workclass": "Self-emp-not-inc",
+        "fnlgt": 198759,
+        "education": "Prof-school",
+        "education_num": 15,
+        "marital_status": "Married-civ-spouse",
+        "occupation": "Prof-specialty",
+        "relationship": "Husband",
+        "race": "White",
+        "sex": "Male",
+        "capital_gain": 0,
+        "capital_loss": 2415,
+        "hours_per_week": 80,
+        "native_country": "United-States",
+        "labels": 1,
     }
+
     return data
 
 
@@ -73,6 +66,7 @@ def test_api_predict_negative(test_data_negative):
 
 def test_api_predict_positive(test_data_positive):
     r = client.post("/predict", json=test_data_positive)
+    print(r.json())
     assert r.status_code == 200
     assert r.json() == "Predicted salary is > 50K"
 
@@ -83,15 +77,16 @@ def test_cloud_api_get():
     assert r.status_code == 200
 
 
-def test_cloud_api_post_positive(test_data_positive):
-    end_point = "https://udacity-income-prediction-6a6fa37bfd96.herokuapp.com/predict"
-    r = requests.post(end_point, json=test_data_positive)
-    assert r.status_code == 200
-    assert r.json() == "Predicted salary is > 50K"
-
-
 def test_cloud_api_post_negative(test_data_negative):
     end_point = "https://udacity-income-prediction-6a6fa37bfd96.herokuapp.com/predict"
-    r = requests.post(end_point, json=test_data_negative)
+    r = requests.post(end_point, json={"dict_features": [test_data_negative]})
+    print(r.json())
     assert r.status_code == 200
     assert r.json() == "Predicted salary is <= 50K"
+
+
+def test_cloud_api_post_positive(test_data_positive):
+    end_point = "https://udacity-income-prediction-6a6fa37bfd96.herokuapp.com/predict"
+    r = requests.post(end_point, json={"dict_features": [test_data_positive]})
+    assert r.status_code == 200
+    assert r.json() == "Predicted salary is > 50K"
