@@ -62,6 +62,7 @@ def test_data_positive():
 def test_api_locally_get_root():
     r = client.get("/")
     assert r.status_code == 200
+    assert r.json() == "Welcome to the Salary Prediction API!"
 
 
 def test_api_predict_negative(test_data_negative):
